@@ -38,8 +38,6 @@ Audience와 TicketSeller를 변경할 경우 이들에게 의존하는 Theater�
 -> 의존성이 무조건 없애는 것이 정답은 아니기에 최소한의 의존성만 유지하자
 
 
-<img width="638" alt="image" src="https://github.com/SH0123/ObjectStudy/assets/26588989/e8a47803-5862-4b5d-bf26-c5d76037fb21">
-
 ## Audience와 TicketSeller를 Theater로부터 결합도를 낮춤
 
 객체간의 결합도를 낮추고 객체 내부의 응집도를 높인다
@@ -75,10 +73,10 @@ class Audience {
 ```
 
 이와 같이 Theater에게 책임이 집중되어 있던 상황
-<img width="738" alt="image" src="https://github.com/SH0123/ObjectStudy/assets/26588989/6237e90d-1505-4bc8-8520-4bf34a8cf6ec">
+
 
 하나의 기능을 완성하는데 필요한 책임을 여러 객체에 걸쳐 분산 -> 책임의 이동
-<img width="727" alt="image" src="https://github.com/SH0123/ObjectStudy/assets/26588989/e39a44ed-cecc-427e-9bed-6a6d9e6ee3cc">
+
 
 ```swift
 Class Audience {
@@ -113,6 +111,6 @@ Class TicketSeller {
      }
 }
 ```
-<img width="723" alt="image" src="https://github.com/SH0123/ObjectStudy/assets/26588989/b13dfada-a350-4b42-a752-58b8deaa7fff"><br/>
+<br/>
 기존에 없던 TicketOffice와 Audience 사이의 의존성이 추가되었다.
 이렇게 설계는 트레이드오프의 산물이라고 볼 수 있는데 계속해서 개발해보면서 트레이드오프에 대해 생각해보고 좋은 설계를 하는데 있어서 합당한 판단을 내릴 수 있도록 해보자
