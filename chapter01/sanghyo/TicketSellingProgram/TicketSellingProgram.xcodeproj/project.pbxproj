@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E6AD22082B022EA6004D8A06 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22072B022EA6004D8A06 /* main.swift */; };
+		E6AD220F2B022FE6004D8A06 /* Invitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD220E2B022FE6004D8A06 /* Invitation.swift */; };
+		E6AD22112B02303A004D8A06 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22102B02303A004D8A06 /* Ticket.swift */; };
+		E6AD22132B023071004D8A06 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22122B023071004D8A06 /* Bag.swift */; };
+		E6AD22152B02327F004D8A06 /* Audience.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22142B02327F004D8A06 /* Audience.swift */; };
+		E6AD22172B0232BD004D8A06 /* TicketOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22162B0232BD004D8A06 /* TicketOffice.swift */; };
+		E6AD22192B023336004D8A06 /* TicketSeller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22182B023336004D8A06 /* TicketSeller.swift */; };
+		E6AD221B2B0233CE004D8A06 /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD221A2B0233CE004D8A06 /* Theater.swift */; };
+		E6AD22232B023E2C004D8A06 /* Unit_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22222B023E2C004D8A06 /* Unit_Test.swift */; };
+		E6AD22272B023EA0004D8A06 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22072B022EA6004D8A06 /* main.swift */; };
+		E6AD22282B023EA1004D8A06 /* TicketOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22162B0232BD004D8A06 /* TicketOffice.swift */; };
+		E6AD22292B023EA3004D8A06 /* Audience.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22142B02327F004D8A06 /* Audience.swift */; };
+		E6AD222A2B023EA5004D8A06 /* TicketSeller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22182B023336004D8A06 /* TicketSeller.swift */; };
+		E6AD222B2B023EA7004D8A06 /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD221A2B0233CE004D8A06 /* Theater.swift */; };
+		E6AD222C2B023EAB004D8A06 /* Invitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD220E2B022FE6004D8A06 /* Invitation.swift */; };
+		E6AD222D2B023EAD004D8A06 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22102B02303A004D8A06 /* Ticket.swift */; };
+		E6AD222E2B023EB0004D8A06 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22122B023071004D8A06 /* Bag.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E6AD22022B022EA6004D8A06 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E6AD22042B022EA6004D8A06 /* TicketSellingProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TicketSellingProgram; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6AD22072B022EA6004D8A06 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E6AD220E2B022FE6004D8A06 /* Invitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invitation.swift; sourceTree = "<group>"; };
+		E6AD22102B02303A004D8A06 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		E6AD22122B023071004D8A06 /* Bag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
+		E6AD22142B02327F004D8A06 /* Audience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audience.swift; sourceTree = "<group>"; };
+		E6AD22162B0232BD004D8A06 /* TicketOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketOffice.swift; sourceTree = "<group>"; };
+		E6AD22182B023336004D8A06 /* TicketSeller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketSeller.swift; sourceTree = "<group>"; };
+		E6AD221A2B0233CE004D8A06 /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
+		E6AD22202B023E2B004D8A06 /* Unit Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6AD22222B023E2C004D8A06 /* Unit_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit_Test.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6AD22012B022EA6004D8A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6AD221D2B023E2B004D8A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E6AD21FB2B022EA6004D8A06 = {
+			isa = PBXGroup;
+			children = (
+				E6AD22062B022EA6004D8A06 /* TicketSellingProgram */,
+				E6AD22212B023E2C004D8A06 /* Unit Test */,
+				E6AD22052B022EA6004D8A06 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E6AD22052B022EA6004D8A06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6AD22042B022EA6004D8A06 /* TicketSellingProgram */,
+				E6AD22202B023E2B004D8A06 /* Unit Test.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6AD22062B022EA6004D8A06 /* TicketSellingProgram */ = {
+			isa = PBXGroup;
+			children = (
+				E6AD22072B022EA6004D8A06 /* main.swift */,
+				E6AD220E2B022FE6004D8A06 /* Invitation.swift */,
+				E6AD22102B02303A004D8A06 /* Ticket.swift */,
+				E6AD22122B023071004D8A06 /* Bag.swift */,
+				E6AD22142B02327F004D8A06 /* Audience.swift */,
+				E6AD22162B0232BD004D8A06 /* TicketOffice.swift */,
+				E6AD22182B023336004D8A06 /* TicketSeller.swift */,
+				E6AD221A2B0233CE004D8A06 /* Theater.swift */,
+			);
+			path = TicketSellingProgram;
+			sourceTree = "<group>";
+		};
+		E6AD22212B023E2C004D8A06 /* Unit Test */ = {
+			isa = PBXGroup;
+			children = (
+				E6AD22222B023E2C004D8A06 /* Unit_Test.swift */,
+			);
+			path = "Unit Test";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6AD22032B022EA6004D8A06 /* TicketSellingProgram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6AD220B2B022EA6004D8A06 /* Build configuration list for PBXNativeTarget "TicketSellingProgram" */;
+			buildPhases = (
+				E6AD22002B022EA6004D8A06 /* Sources */,
+				E6AD22012B022EA6004D8A06 /* Frameworks */,
+				E6AD22022B022EA6004D8A06 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TicketSellingProgram;
+			productName = TicketSellingProgram;
+			productReference = E6AD22042B022EA6004D8A06 /* TicketSellingProgram */;
+			productType = "com.apple.product-type.tool";
+		};
+		E6AD221F2B023E2B004D8A06 /* Unit Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6AD22242B023E2C004D8A06 /* Build configuration list for PBXNativeTarget "Unit Test" */;
+			buildPhases = (
+				E6AD221C2B023E2B004D8A06 /* Sources */,
+				E6AD221D2B023E2B004D8A06 /* Frameworks */,
+				E6AD221E2B023E2B004D8A06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Unit Test";
+			productName = "Unit Test";
+			productReference = E6AD22202B023E2B004D8A06 /* Unit Test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6AD21FC2B022EA6004D8A06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					E6AD22032B022EA6004D8A06 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					E6AD221F2B023E2B004D8A06 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = E6AD21FF2B022EA6004D8A06 /* Build configuration list for PBXProject "TicketSellingProgram" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E6AD21FB2B022EA6004D8A06;
+			productRefGroup = E6AD22052B022EA6004D8A06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6AD22032B022EA6004D8A06 /* TicketSellingProgram */,
+				E6AD221F2B023E2B004D8A06 /* Unit Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6AD221E2B023E2B004D8A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6AD22002B022EA6004D8A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6AD220F2B022FE6004D8A06 /* Invitation.swift in Sources */,
+				E6AD22112B02303A004D8A06 /* Ticket.swift in Sources */,
+				E6AD22152B02327F004D8A06 /* Audience.swift in Sources */,
+				E6AD22132B023071004D8A06 /* Bag.swift in Sources */,
+				E6AD22082B022EA6004D8A06 /* main.swift in Sources */,
+				E6AD221B2B0233CE004D8A06 /* Theater.swift in Sources */,
+				E6AD22172B0232BD004D8A06 /* TicketOffice.swift in Sources */,
+				E6AD22192B023336004D8A06 /* TicketSeller.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6AD221C2B023E2B004D8A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6AD222A2B023EA5004D8A06 /* TicketSeller.swift in Sources */,
+				E6AD22272B023EA0004D8A06 /* main.swift in Sources */,
+				E6AD22232B023E2C004D8A06 /* Unit_Test.swift in Sources */,
+				E6AD222D2B023EAD004D8A06 /* Ticket.swift in Sources */,
+				E6AD222C2B023EAB004D8A06 /* Invitation.swift in Sources */,
+				E6AD222B2B023EA7004D8A06 /* Theater.swift in Sources */,
+				E6AD22282B023EA1004D8A06 /* TicketOffice.swift in Sources */,
+				E6AD222E2B023EB0004D8A06 /* Bag.swift in Sources */,
+				E6AD22292B023EA3004D8A06 /* Audience.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E6AD22092B022EA6004D8A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E6AD220A2B022EA6004D8A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		E6AD220C2B022EA6004D8A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 953VJTV7TA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E6AD220D2B022EA6004D8A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 953VJTV7TA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E6AD22252B023E2C004D8A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 953VJTV7TA;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "travelerSH.Unit-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E6AD22262B023E2C004D8A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 953VJTV7TA;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "travelerSH.Unit-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6AD21FF2B022EA6004D8A06 /* Build configuration list for PBXProject "TicketSellingProgram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6AD22092B022EA6004D8A06 /* Debug */,
+				E6AD220A2B022EA6004D8A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6AD220B2B022EA6004D8A06 /* Build configuration list for PBXNativeTarget "TicketSellingProgram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6AD220C2B022EA6004D8A06 /* Debug */,
+				E6AD220D2B022EA6004D8A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6AD22242B023E2C004D8A06 /* Build configuration list for PBXNativeTarget "Unit Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6AD22252B023E2C004D8A06 /* Debug */,
+				E6AD22262B023E2C004D8A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E6AD21FC2B022EA6004D8A06 /* Project object */;
+}
