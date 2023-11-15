@@ -1,14 +1,12 @@
 # ObjectStudy
-
-# 1. 객체, 설계 <br/>
-
+# 1. 객체, 설계 
 ## 목차
 - 기존 책 코드
 - <a href="#refacotr">책 내용과 다르게 리팩토링</a>
 
 ## 기존 책 코드 
 ```swift
-class Teater {
+class Theater {
 // ... 
 
 func enter(audience: Audience) {
