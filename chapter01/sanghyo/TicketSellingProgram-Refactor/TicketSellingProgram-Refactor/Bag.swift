@@ -1,8 +1,8 @@
 //
 //  Bag.swift
-//  TicketSellingProgram
+//  TicketSellingProgram-Refactor
 //
-//  Created by sanghyo on 11/13/23.
+//  Created by sanghyo on 11/15/23.
 //
 
 import Foundation
@@ -42,15 +42,15 @@ class Bag {
         }
     }
     
-    func setTicket(ticket: Ticket) {
+    private func setTicket(ticket: Ticket) {
         self.ticket = ticket
     }
     
-    func minusAmount(amount: Int) {
+    private func minusAmount(amount: Int) {
         self.amount -= amount
     }
     
-    func plusAmount(amount: Int) {
+    private func plusAmount(amount: Int) {
         self.amount += amount
     }
     
@@ -58,4 +58,6 @@ class Bag {
     var getAmount: Int {
         return self.amount
     }
+    
+    
 }
