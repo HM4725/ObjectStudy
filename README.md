@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 ![Static Badge](https://img.shields.io/badge/book-object-F7D1B0)
-![Static Badge](https://img.shields.io/badge/study-1-BADB52)
+![Static Badge](https://img.shields.io/badge/study-2-BADB52)
 ![Static Badge](https://img.shields.io/badge/c++-17-00AAAA)
 ![Static Badge](https://img.shields.io/badge/swift-5.0-F05138)
 
@@ -43,11 +43,14 @@
 
 ## Attendance
 
-| 챕터 | 제목       | 날짜            | 참여자 | 언어  |
-| ---- | ---------- | --------------- | ------ | ----- |
-| 1    | 객체, 설계 | 2023-11-13 (월) | 이현민 | C++   |
-| 1    | 객체, 설계 | 2023-11-13 (월) | 김상효 | Swift |
-|      |            |                 | 김기환 | C++   |
+| 챕터 | 제목                | 날짜            | 참여자 | 언어  |
+| ---- | ------------------- | --------------- | ------ | ----- |
+| 1    | 객체, 설계          | 2023-11-13 (월) | 이현민 | C++   |
+|      |                     | 2023-11-13 (월) | 김상효 | Swift |
+|      |                     |                 | 김기환 | C++   |
+| 2    | 객체지향 프로그래밍 | 2023-11-30 (목) | 김상효 | Swift |
+|      |                     | 2023-12-02 (토) | 이현민 | C++   |
+|      |                     |                 | 김기환 | C++   |
 
 <p align="right">
   <a href="#readme-top">맨위로 ⬆</a>
