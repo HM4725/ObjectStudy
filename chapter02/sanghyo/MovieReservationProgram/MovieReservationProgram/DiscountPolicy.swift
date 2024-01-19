@@ -18,7 +18,7 @@ class DiscountPolicy: AbstractDiscountPolicy {
         self.conditions = conditions
     }
     
-    func calculateDiscountAmount(screening: Screening) -> Money {
+    final func calculateDiscountAmount(screening: Screening) -> Money {
         for condition in conditions {
             if(condition.isSatisfiedBy(screening: screening)) {
                 return getDiscountAmount(screening: screening)
