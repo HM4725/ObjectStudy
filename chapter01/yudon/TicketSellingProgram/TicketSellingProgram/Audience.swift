@@ -8,6 +8,7 @@
 import Foundation
 
 class Audience {
+
     private var bag: Bag
     
     init(bag: Bag) {
@@ -17,4 +18,5 @@ class Audience {
     func buy(ticket: Ticket) -> Int {
         return bag.hold(ticket: ticket)
     }
+
 }

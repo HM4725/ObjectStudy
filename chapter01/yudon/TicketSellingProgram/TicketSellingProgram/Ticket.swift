@@ -8,6 +8,7 @@
 import Foundation
 
 class Ticket {
+
     private var fee: Int
     
     init(fee: Int) {
@@ -17,4 +18,5 @@ class Ticket {
     func getFee() -> Int {
         return self.fee
     }
+
 }

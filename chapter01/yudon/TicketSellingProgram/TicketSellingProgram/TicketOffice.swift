@@ -8,6 +8,7 @@
 import Foundation
 
 class TicketOffice {
+
     private var amount: Int
     private var tickets: [Ticket] = []
     
@@ -17,12 +18,12 @@ class TicketOffice {
     }
     
     func sellTicketTo(audience: Audience) {
-        guard let ticket = getTicket() else { return }
-        plusAmount(amount: audience.buy(ticket: ticket))
-    }
-    
-    func minusAmount(amount: Int) {
-        self.amount -= amount
+        guard let ticket = self.getTicket() else {
+            return
+        }
+        
+        let amount = audience.buy(ticket: ticket)
+        self.plusAmount(amount: amount)
     }
     
     private func getTicket() -> Ticket? {
@@ -32,4 +33,5 @@ class TicketOffice {
     private func plusAmount(amount: Int) {
         self.amount += amount
     }
+
 }
