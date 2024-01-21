@@ -13,13 +13,11 @@
 		E6AD22132B023071004D8A06 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22122B023071004D8A06 /* Bag.swift */; };
 		E6AD22152B02327F004D8A06 /* Audience.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22142B02327F004D8A06 /* Audience.swift */; };
 		E6AD22172B0232BD004D8A06 /* TicketOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22162B0232BD004D8A06 /* TicketOffice.swift */; };
-		E6AD22192B023336004D8A06 /* TicketSeller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22182B023336004D8A06 /* TicketSeller.swift */; };
 		E6AD221B2B0233CE004D8A06 /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD221A2B0233CE004D8A06 /* Theater.swift */; };
 		E6AD22232B023E2C004D8A06 /* Unit_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22222B023E2C004D8A06 /* Unit_Test.swift */; };
 		E6AD22272B023EA0004D8A06 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22072B022EA6004D8A06 /* main.swift */; };
 		E6AD22282B023EA1004D8A06 /* TicketOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22162B0232BD004D8A06 /* TicketOffice.swift */; };
 		E6AD22292B023EA3004D8A06 /* Audience.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22142B02327F004D8A06 /* Audience.swift */; };
-		E6AD222A2B023EA5004D8A06 /* TicketSeller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22182B023336004D8A06 /* TicketSeller.swift */; };
 		E6AD222B2B023EA7004D8A06 /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD221A2B0233CE004D8A06 /* Theater.swift */; };
 		E6AD222C2B023EAB004D8A06 /* Invitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD220E2B022FE6004D8A06 /* Invitation.swift */; };
 		E6AD222D2B023EAD004D8A06 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD22102B02303A004D8A06 /* Ticket.swift */; };
@@ -46,7 +44,6 @@
 		E6AD22122B023071004D8A06 /* Bag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
 		E6AD22142B02327F004D8A06 /* Audience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audience.swift; sourceTree = "<group>"; };
 		E6AD22162B0232BD004D8A06 /* TicketOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketOffice.swift; sourceTree = "<group>"; };
-		E6AD22182B023336004D8A06 /* TicketSeller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketSeller.swift; sourceTree = "<group>"; };
 		E6AD221A2B0233CE004D8A06 /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
 		E6AD22202B023E2B004D8A06 /* Unit Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6AD22222B023E2C004D8A06 /* Unit_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit_Test.swift; sourceTree = "<group>"; };
@@ -97,7 +94,6 @@
 				E6AD22122B023071004D8A06 /* Bag.swift */,
 				E6AD22142B02327F004D8A06 /* Audience.swift */,
 				E6AD22162B0232BD004D8A06 /* TicketOffice.swift */,
-				E6AD22182B023336004D8A06 /* TicketSeller.swift */,
 				E6AD221A2B0233CE004D8A06 /* Theater.swift */,
 			);
 			path = TicketSellingProgram;
@@ -207,7 +203,6 @@
 				E6AD22082B022EA6004D8A06 /* main.swift in Sources */,
 				E6AD221B2B0233CE004D8A06 /* Theater.swift in Sources */,
 				E6AD22172B0232BD004D8A06 /* TicketOffice.swift in Sources */,
-				E6AD22192B023336004D8A06 /* TicketSeller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +210,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6AD222A2B023EA5004D8A06 /* TicketSeller.swift in Sources */,
 				E6AD22272B023EA0004D8A06 /* main.swift in Sources */,
 				E6AD22232B023E2C004D8A06 /* Unit_Test.swift in Sources */,
 				E6AD222D2B023EAD004D8A06 /* Ticket.swift in Sources */,

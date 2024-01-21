@@ -8,13 +8,15 @@
 import Foundation
 
 class Theater {
-    private var ticketSeller: TicketSeller
+
+    private var ticketOffice: TicketOffice
     
-    init(ticketSeller: TicketSeller) {
-        self.ticketSeller = ticketSeller
+    init(ticketOffice: TicketOffice) {
+        self.ticketOffice = ticketOffice
     }
     
     func enter(audience: Audience) {
-        ticketSeller.sellTo(audience: audience)
+        self.ticketOffice.sellTicketTo(audience: audience)
     }
+
 }

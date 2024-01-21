@@ -9,7 +9,6 @@ import Foundation
 
 let totalTicket = (1...100).map { _ in Ticket(fee: 300) }
 let ticketOffice = TicketOffice(amount: 0, tickets: totalTicket)
-let ticketSeller = TicketSeller(ticketOffice: ticketOffice)
-let CGVTheater = Theater(ticketSeller: ticketSeller)
+let CGVTheater = Theater(ticketOffice: ticketOffice)
 
 
