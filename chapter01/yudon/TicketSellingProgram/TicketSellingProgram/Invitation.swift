@@ -7,10 +7,12 @@
 
 import Foundation
 
-class Invitation {
-    private var when: Date
-    
-    init(when: Date) {
+internal class Invitation {
+
+    internal init(when: Date) {
         self.when = when
     }
+
+    private let when: Date
+
 }

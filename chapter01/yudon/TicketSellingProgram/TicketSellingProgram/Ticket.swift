@@ -7,16 +7,12 @@
 
 import Foundation
 
-class Ticket {
-
-    private var fee: Int
+internal struct Ticket {
     
-    init(fee: Int) {
+    internal init(fee: Int) {
         self.fee = fee
     }
     
-    func getFee() -> Int {
-        return self.fee
-    }
-
+    internal let fee: Int
+    
 }

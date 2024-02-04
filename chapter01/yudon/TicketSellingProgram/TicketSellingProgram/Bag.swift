@@ -7,11 +7,12 @@
 
 import Foundation
 
-class Bag {
+internal class Bag {
 
     private var amount: Int
     private var invitation: Invitation?
-    private var ticket: Ticket?
+
+    internal private(set) var ticket: Ticket?
     
     init(invitation: Invitation?, amount: Int) {
         self.invitation = invitation
@@ -23,32 +24,29 @@ class Bag {
         self.init(invitation: nil, amount: amount)
     }
     
-    func hold(ticket: Ticket) -> Int {
-        if hasInvitation() {
-            setTicket(ticket: ticket)
-            return 0
-        } else {
-            let ticketFee = ticket.getFee()
-            minusAmount(amount: ticketFee)
-            setTicket(ticket: ticket)
-            return ticketFee
-        }
+    internal func hold(ticket: Ticket) -> Int? {
+        if self.hasInvitation() {
+            return self.buyTicketWithInvitation(ticket: ticket)
+        } 
+        return self.buyTicketWithMoney(ticket: ticket)
     }
-    
-    func setTicket(ticket: Ticket) {
+
+    private func buyTicketWithInvitation(ticket: Ticket) -> Int {
         self.ticket = ticket
+        return 0
     }
-    
-    func minusAmount(amount: Int) {
-        self.amount -= amount
+
+    private func buyTicketWithMoney(ticket: Ticket) -> Int? {
+        if self.amount >= ticket.fee {
+            self.amount -= amount
+            self.ticket = ticket
+            return ticket.fee
+        }
+        return 0
     }
     
     private func hasInvitation() -> Bool {
-        return invitation != nil ? true : false
+        self.invitation != nil ? true : false
     }
-    
-    private func hasTicket() -> Bool {
-        return ticket != nil ? true : false
-    }
-    
+
 }

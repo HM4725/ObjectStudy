@@ -7,30 +7,28 @@
 
 import Foundation
 
-class TicketOffice {
+internal class TicketOffice {
 
     private var amount: Int
     private var tickets: [Ticket] = []
     
-    init(amount: Int, tickets: [Ticket]) {
+    internal init(amount: Int, tickets: [Ticket]) {
         self.amount = amount
         self.tickets = tickets
     }
     
-    func sellTicketTo(audience: Audience) {
-        guard let ticket = self.getTicket() else {
-            return
-        }
-        
-        let amount = audience.buy(ticket: ticket)
-        self.plusAmount(amount: amount)
+    internal func sellTicketTo(audience: Audience) {
+        self.ticket()
+            .flatMap { audience.buy(ticket: $0) }
+            .map { self.removeLastTicket(amount: $0) }
     }
     
-    private func getTicket() -> Ticket? {
-        return tickets.popLast()
+    private func ticket() -> Ticket? {
+        return self.tickets.last
     }
     
-    private func plusAmount(amount: Int) {
+    private func removeLastTicket(amount: Int) {
+        _ = self.tickets.popLast()
         self.amount += amount
     }
 

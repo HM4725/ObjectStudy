@@ -7,16 +7,16 @@
 
 import Foundation
 
-class Audience {
+internal class Audience {
 
-    private var bag: Bag
-    
-    init(bag: Bag) {
+    internal init(bag: Bag) {
         self.bag = bag
     }
     
-    func buy(ticket: Ticket) -> Int {
-        return bag.hold(ticket: ticket)
+    internal func buy(ticket: Ticket) -> Int? {
+        self.bag.hold(ticket: ticket)
     }
+    
+    internal let bag: Bag
 
 }

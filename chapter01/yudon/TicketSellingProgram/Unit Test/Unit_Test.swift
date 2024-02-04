@@ -8,56 +8,58 @@
 import XCTest
 
 final class Unit_Test: XCTestCase {
+
     private var initialAmount: Int!
     private var ticketFee: Int!
     private var audience: Audience!
     private var ticketOffice: TicketOffice!
-    private var ticketSeller: TicketSeller!
     private var theater: Theater!
     private var tickets: [Ticket]!
-    
-    
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
     
     override func setUp() {
         super.setUp()
         self.initialAmount = 5000
         self.tickets = .init(repeating: Ticket(fee: 500), count: 30)
-        self.ticketFee = tickets[0].getFee()
-        self.ticketOffice = .init(amount: 5000, tickets: tickets)
-        self.ticketSeller = .init(ticketOffice: ticketOffice)
-        self.theater = .init(ticketSeller: ticketSeller)
+        self.ticketFee = tickets[0].fee
+        self.ticketOffice = TicketOffice(amount: 5000, tickets: tickets)
+        self.theater = Theater(ticketOffice: ticketOffice)
     }
     
-    func test_초대장_없는_사람() {
+    func test_초대장_없는_사람_티켓_구매_성공() {
         // given
-        var noInvitationBag: Bag = .init(amount: initialAmount)
-        audience = .init(bag: noInvitationBag)
+        let bag = Bag(amount: initialAmount)
+        self.audience = Audience(bag: bag)
+        
+        // when
+        self.theater.enter(audience: audience)
+        
+        // then
+        XCTAssertNotNil(self.audience.bag.ticket, "티켓 구매 실패")
+    }
+    
+    func test_초대장_없는_사람_티켓_구매_실패() {
+        // given
+        let bag = Bag(amount: 300)
+        self.audience = Audience(bag: bag)
+        
+        // when
+        self.theater.enter(audience: audience)
+        
+        // then
+        XCTAssertNil(self.audience.bag.ticket, "티켓 구매 실패 케이스에서, 티켓 구매 성공(구매 금액 부족)")
+    }
+
+    func test_초대장_있는_사람_티켓_획득_성공() {
+        // given
+        let invitation: Invitation = Invitation(when: Date())
+        let bag = Bag(invitation: invitation, amount: 0)
+        self.audience = Audience(bag: bag)
         
         // when
         theater.enter(audience: audience)
         
         // then
-        XCTAssertEqual(noInvitationBag.getAmount, initialAmount - ticketFee, "두 값이 일치하지 않습니다")
-    }
-    
-    func test_초대장_있는_사람() {
-        // given
-        var invitation: Invitation = .init(when: Date())
-        var invitationBag: Bag = .init(invitation: invitation, amount: 5000)
-        audience = .init(bag: invitationBag)
-        
-        // when
-        theater.enter(audience: audience)
-        
-        // then
-        XCTAssertEqual(invitationBag.getAmount, initialAmount, "두 값이 일치하지 않습니다")
+        XCTAssertNotNil(self.audience.bag.ticket, "티켓 구매 실패")
     }
 
 }

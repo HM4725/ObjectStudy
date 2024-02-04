@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Theater {
+internal class Theater {
 
     private var ticketOffice: TicketOffice
     
