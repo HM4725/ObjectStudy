@@ -7,7 +7,7 @@
 
 import Foundation
 
-internal class Invitation {
+internal struct Invitation {
 
     internal init(when: Date) {
         self.when = when
