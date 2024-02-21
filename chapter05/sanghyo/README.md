@@ -24,7 +24,84 @@
 
 
 ## 2. 코드 구현으로 비교해보기
+### 설계가 아래처럼 바뀌는 경우 문제점 (가능한 설계는 많기에 응집도와 결합도를 기준으로 trade-off를 따져보자)
+<img width="646" alt="image" src="https://github.com/HM4725/ObjectStudy/assets/26588989/2ae0c9a5-db8a-4205-9b01-fbc745d2feaa"><br/>
+**높은 응집도를 유지하지 못함**
+변경된 설계에 따라 아래와 같이 코드가 바뀐다.
+```swift
+// 가격을 계산하라 메시지에 응답
+struct Movie {
+    // property 생략
+    
+    // 계산하라 메시지
+    func calculateMovieFee(isDiscountable: Bool) -> Double {
+        if isDiscountable {
+            return fee - calculateDiscountAmount()
+        }
+        return fee
+    }
+}
 
+// 예매하라 메시지에 응답
+struct Screening {
+    // 나머지 property 생략
+    private var discountConditions: [DiscountCondition]
+
+    // 나머지 메소드 생략
+    private func calculateFee(audienceCount: Int) -> Double {
+        // movie 객체에게 "계산하라" 메시지 전달
+        return movie.calculateMovieFee(isDiscountable: isDiscountable(screening: self)) * Double(audienceCount)
+    }
+    
+    // Movie의 "계산하라" 책임에 영향을 주는 코드
+    private func isDiscountable(screening: Screening) -> Bool {
+        for condition in discountConditions {
+            if condition.isSatisfiedBy(screening: self) {
+                return true
+            }
+        }
+        return false
+    }
+}
+```
+이 때 예매 요금을 계산하는 방식이 변경되는 경우를 가정해보자.
+discount condition이 period type에 일치하는 경우 50%, 아닌 경우 10%, sequence type에 일치하는 경우 70%, 아닌 경우 10% 추가 할인하는 정책으로 바뀌었다고 가정하자. (코드 작성을 위한 어거지 상황 ...)<br/>
+코드상에서 변경되는 지점을 확인해보면 아래와 같다
+```swift
+// 가격을 계산하라 메시지에 응답
+struct Movie {
+    
+    // 계산하라 메시지
+    func calculateMovieFee(discountType: DiscountType) -> Double {
+        var fee = fee - calculateDiscountAmount()
+        return fee * Double(discountType.percent())
+    }
+}
+
+struct Screening {
+  private func calculateFee(audienceCount: Int) -> Double {
+        // movie 객체에게 "계산하라" 메시지 전달
+        return movie.calculateMovieFee(discountType: getDiscountType(screening: self)) * Double(audienceCount)
+    }
+    
+    // Movie의 "계산하라" 책임에 영향을 주는 코드
+    private func getDiscountType(screening: Screening) -> DiscountType {
+        var discountType: DiscountType = .ten
+        for condition in discountConditions {
+            discountType = getBetterDiscountType(discountType, condition.getDiscountPercent(screening: self))
+        }
+        return discountType
+    }
+    
+    private func getBetterDiscountType(_ type1: DiscountType, _ type2: DiscountType) -> DiscountType {
+        return type1.rawValue > type2.rawValue ? type1 : type2
+    }
+}
+```
+기존의 설계대로 했다면 DiscountCondition, Movie 객체에서 변경만 발생하고 Screening에서의 변경은 발생하지 않았겠지만 새로운 설계에서는 예매 요금 계산 방식에서의 변화로 인해 세개의 객체 모든 코드에서 변경이 발생하였다.
+즉, Screening이 서로 다른 이유로 변경되는 책임을 짊어지게 되고 이는 높은 응집도를 유지하지 못한다는 뜻이다.
+
+### 그럼에도 높은 결합도를 다형성을 이용하여 낮춰보자
 
 ## 3. 한 줄 느낀점
 객체 지향을 가장한 절차 지향에서 탈피하기 위한 노력. <br/>
