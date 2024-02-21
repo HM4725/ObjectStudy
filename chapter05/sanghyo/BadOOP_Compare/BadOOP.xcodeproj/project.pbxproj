@@ -16,6 +16,7 @@
 		E651DE9D2B8057B300389D32 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E651DE9C2B8057B300389D32 /* Extension+Date.swift */; };
 		E651DE9F2B80590C00389D32 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E651DE9E2B80590C00389D32 /* Reservation.swift */; };
 		E651DEA12B80598300389D32 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E651DEA02B80598300389D32 /* Customer.swift */; };
+		E6AA58272B859C9700A060DC /* DiscountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AA58262B859C9700A060DC /* DiscountType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		E651DE9C2B8057B300389D32 /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		E651DE9E2B80590C00389D32 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		E651DEA02B80598300389D32 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		E6AA58262B859C9700A060DC /* DiscountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				E651DEA02B80598300389D32 /* Customer.swift */,
 				E651DE9C2B8057B300389D32 /* Extension+Date.swift */,
 				E651DE9E2B80590C00389D32 /* Reservation.swift */,
+				E6AA58262B859C9700A060DC /* DiscountType.swift */,
 			);
 			path = BadOOP;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				E651DE972B80532B00389D32 /* Screening.swift in Sources */,
 				E651DE992B8056B600389D32 /* DiscountCondition.swift in Sources */,
+				E6AA58272B859C9700A060DC /* DiscountType.swift in Sources */,
 				E651DE9D2B8057B300389D32 /* Extension+Date.swift in Sources */,
 				E651DE932B80528800389D32 /* Movie.swift in Sources */,
 				E651DE9F2B80590C00389D32 /* Reservation.swift in Sources */,

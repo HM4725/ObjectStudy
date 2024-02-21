@@ -18,11 +18,9 @@ struct Movie {
     private var discountPercent: Double
     
     // 계산하라 메시지
-    func calculateMovieFee(isDiscountable: Bool) -> Double {
-        if isDiscountable {
-            return fee - calculateDiscountAmount()
-        }
-        return fee
+    func calculateMovieFee(discountType: DiscountType) -> Double {
+        var fee = fee - calculateDiscountAmount()
+        return fee * Double(discountType.percent())
     }
     
     private func calculateDiscountAmount() -> Double {

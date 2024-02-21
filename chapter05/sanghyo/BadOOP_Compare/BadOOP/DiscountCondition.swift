@@ -14,13 +14,21 @@ struct DiscountCondition {
     private var startTime: Date
     private var endTime: Date
     
-    func isSatisfiedBy(screening: Screening) -> Bool {
+    func getDiscountPercent(screening: Screening) -> DiscountType {
         // DiscountCondition 객체에 type에 따라 쪼갤 수 있는 함수들이 존재
         if type == DiscountConditionType.period {
-            return isSatisfiedByPeriod(screening: screening)
+            if isSatisfiedByPeriod(screening: screening) {
+                return DiscountType.fifty
+            } else {
+                return DiscountType.ten
+            }
         }
         
-        return isSatisfiedBySequence(screening: screening)
+        if isSatisfiedBySequence(screening: screening) {
+            return DiscountType.seventy
+        } else {
+            return DiscountType.ten
+        }
     }
     
     private func isSatisfiedByPeriod(screening: Screening) -> Bool {
