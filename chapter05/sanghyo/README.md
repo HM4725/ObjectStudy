@@ -101,7 +101,71 @@ struct Screening {
 기존의 설계대로 했다면 DiscountCondition, Movie 객체에서 변경만 발생하고 Screening에서의 변경은 발생하지 않았겠지만 새로운 설계에서는 예매 요금 계산 방식에서의 변화로 인해 세개의 객체 모든 코드에서 변경이 발생하였다.
 즉, Screening이 서로 다른 이유로 변경되는 책임을 짊어지게 되고 이는 높은 응집도를 유지하지 못한다는 뜻이다.
 
-### 그럼에도 높은 결합도를 다형성을 이용하여 낮춰보자
+### 상속과 합성의 비교를 통해 알아보는 변경과 유연성
+상속을 통해 구현된 AmountDiscountMovie와 PercentDiscountMovie
+```swift
+class Movie {
+    private var title: String
+    private var runningTime: Int
+    private var fee: Double
+    // 모든 discount condition이 discountConditions 배열에 포함
+    private var discountConditions: [DiscountCondition]
+
+    // init ... 생략
+    
+    // ...
+}
+
+final class AmountDiscountMovie: Movie {
+    private var discountAmount: Double
+    
+    init(title: String, runningTime: Int, fee: Double, discountConditions: [DiscountCondition], discountAmount: Double) {
+        self.discountAmount = discountAmount
+        super.init(title: title, runningTime: runningTime, fee: fee, discountConditions: discountConditions)
+    }
+    
+    override func calculateDiscountAmount() -> Double {
+        return discountAmount
+    }
+}
+
+final class PercentDiscountMovie: Movie {
+    private var percent: Double
+    
+    init(title: String, runningTime: Int, fee: Double, discountConditions: [DiscountCondition], percent: Double) {
+        self.percent = percent
+        super.init(title: title, runningTime: runningTime, fee: fee, discountConditions: discountConditions)
+    }
+    
+    override func calculateDiscountAmount() -> Double {
+        return getFee() * percent
+    }
+}
+```
+중간에 정책이 바뀌는 경우 아래와 같이 데이터를 모두 복사해야하는 번거로움 발생 및 private한 property getter를 통해 public하게 공개됨. 또한 오류 가능성 있음.
+
+```swift
+var amountDiscountMovie: Movie = AmountDiscountMovie(title: "About Time", runningTime: 182, fee: 115, discountConditions: [], discountAmount: 50)
+
+// policy 변경
+func copyMovie(movie: AmountDiscountMovie, percent: Double) -> PercentDiscountMovie {
+    var title = movie.getTitle()
+    var runningTime = movie.getRunningTime()
+    var fee = movie.getFee()
+    var discountConditions = movie.getDiscountConditions()
+    
+    return PercentDiscountMovie(title: title, runningTime: runningTime, fee: fee, discountConditions: discountConditions, percent: percent)
+}
+movie = copyMovie(movie: amountDiscountMovie, percent: 90)
+
+```
+위의 문제를 상속이 아닌 합성을 통해 쉽게 변경할 수 있음
+
+```swift
+var movie: Movie = AmountDiscountMovie(title: "About Time", runningTime: 182, fee: 115, discountConditions: [])
+movie.changeDiscountPolicy(new PercentDiscountPolicy)
+```
+
 
 ## 3. 한 줄 느낀점
 객체 지향을 가장한 절차 지향에서 탈피하기 위한 노력. <br/>
